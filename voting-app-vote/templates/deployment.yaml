@@ -1,22 +1,22 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ include "voting-app.fullname" . }}
+  name: {{ include "voting-app-vote.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "voting-app.name" . }}
-    helm.sh/chart: {{ include "voting-app.chart" . }}
+    app.kubernetes.io/name: {{ include "voting-app-vote.name" . }}
+    helm.sh/chart: {{ include "voting-app-vote.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "voting-app.name" . }}
+      app.kubernetes.io/name: {{ include "voting-app-vote.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "voting-app.name" . }}
+        app.kubernetes.io/name: {{ include "voting-app-vote.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:
