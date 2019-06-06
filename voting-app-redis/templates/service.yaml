@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "voting-app-redis.fullname" . }}
+  name: redis
   labels:
     app.kubernetes.io/name: {{ include "voting-app-redis.name" . }}
     helm.sh/chart: {{ include "voting-app-redis.chart" . }}
