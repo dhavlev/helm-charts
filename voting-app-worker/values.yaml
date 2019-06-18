@@ -8,3 +8,7 @@ image:
   repository: dockersamples/examplevotingapp_worker
   tag: latest
   pullPolicy: IfNotPresent
+
+ext:
+  redis: voting-app-redis
+  db: voting-app-db
