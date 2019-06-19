@@ -9,4 +9,4 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   type: ExternalName
-  externalName: "db.{{ Values.ext.db }}.svc.cluster.local"
+  externalName: "db.{{ .Values.ext.db }}.svc.cluster.local"
