@@ -15,4 +15,4 @@ service:
   nodePort: 31002
 
 ext:
-  redis: voting-app-db
+  db: voting-app-db
