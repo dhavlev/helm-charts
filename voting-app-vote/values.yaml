@@ -12,7 +12,6 @@ image:
 service:
   type: ClusterIP
   port: 5000
-  nodePort: 31001
 
 ext:
   redis: voting-app-redis
