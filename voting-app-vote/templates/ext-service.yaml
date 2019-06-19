@@ -9,4 +9,4 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   type: ExternalName
-  externalName: redis.{{ ext.redis }}.svc.cluster.local
+  externalName: "redis.{{ .Values.ext.redis }}.svc.cluster.local"
